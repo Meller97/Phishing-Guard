@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Guard</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #verdict {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .SAFE {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .PHISHING {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .SUSPICIOUS {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .UNKNOWN {
+            background-color: #e2e3e5;
+            color: #383d41;
+        }
+        .ERROR {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        #probability, #reason {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="verdict">Analyzing page...</div>
+        <div id="probability"></div>
+        <div id="reason"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
